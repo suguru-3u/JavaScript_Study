@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test1(){
+            return 'test1';
+        }
+
+
+        async function atest1(){
+            return 'atest1';
+        }
+
+        console.log(test1());
+        console.log(atest1().then(value => console.log(value)));
+
+        function waiting(){
+            return new Promise(ok =>{
+                setTimeout(()=>{
+                    ok()
+                },2000)
+            })
+        };
+
+        async function test2(){
+            console.log(1);
+            await waiting();
+            console.log(3);
+            await waiting();
+            console.log(5);
+        }
+
+        test2();
+
+    </script>
+</body>
+</html>

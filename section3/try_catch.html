@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getMonthName(month){
+            month = month - 1;
+            const months = [1,2,3,4,5,6,7,8,9,10,11,12,];
+
+            if(months[month] != null){
+                return months[month];
+            }else{
+                throw new Error('入力は無効です');
+            }
+        }
+
+        try{
+            const monthName = getMonthName(13);
+        }catch(e){
+            console.log(e);
+        }
+    </script>
+</body>
+</html>

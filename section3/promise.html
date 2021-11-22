@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function promiseTest(){
+        //     return new Promise( ok => {
+        //         ok('プロミス1');
+        //     });
+        // }
+
+        // const promiseTest2 = new Promise( ok => {
+        //     ok('プロミス');
+        // });
+
+        // console.log(promiseTest2);
+
+        // function poromiseTest3(input){
+        //     return new Promise( ok => {
+        //         ok(`${input}です`);
+        //     }); 
+        // }
+
+        // console.log(poromiseTest3('aaa'));
+
+        console.log(1);
+
+        pormiseTest4(260,3)
+        .then(change => pormiseTest4(change,4))
+        .then(change => pormiseTest4(change,5))
+        .catch(e => console.log(e));
+
+        console.log(3);
+
+        function pormiseTest4(pay,seconds){
+            return new Promise((ok,ng) => {
+                setTimeout(() => {
+                    if(pay > 100){
+                        let change = pay -100;
+                        console.log(`${seconds}秒`);
+                        ok(change);
+                    }
+                    ng('お金が足りません');
+                }, seconds * 1000);
+            });
+        }
+
+        // console.log(pormiseTest4(80,10).catch(e    => {
+        //     console.log(e);
+        // }));
+
+        // pormiseTest4(110,5).then( change => {
+        //     console.log(change);
+        //     return pormiseTest4(change,3);
+        // }).then(change => {
+        //     console.log(change);
+        // }).catch(e => console.log(e));
+
+
+
+    </script>
+</body>
+</html>
