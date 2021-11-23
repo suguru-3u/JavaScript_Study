@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class BaseProduct{
+
+        }
+
+
+        export class Product extends BaseProduct{
+
+            constructor(productName){
+                super();
+                this.product = [productName];
+            }
+
+            getProduct(){
+                console.log(this.product);
+            }
+
+            addProduct(item){
+                this.product.push(item); 
+            }
+
+        }
+
+        const priduct = new Product('test');
+        priduct.getProduct();
+        priduct.addProduct('aaa');
+        priduct.getProduct();
+
+    </script>
+</body>
+</html>
