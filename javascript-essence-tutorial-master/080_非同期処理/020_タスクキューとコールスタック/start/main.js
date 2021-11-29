@@ -13,3 +13,6 @@ function a() {
 
     console.log('fn a done');
 }
+
+
+a();

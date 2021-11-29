@@ -23,11 +23,11 @@ const person = {
      * ３．thisを一旦変数に代入
      */
     hello1s() {
-        // setTimeout(this.hello.bind(this, 'hello'), 1000);
+        setTimeout(this.hello.bind(this, 'hello'), 1000);
 
-        // setTimeout(() => {
-        //     this.hello('hello');
-        // }, 1000);
+        setTimeout(() => {
+            this.hello('hello');
+        }, 1000);
 
         const _this = this;
         setTimeout(function() {

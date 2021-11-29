@@ -27,7 +27,7 @@ function calcFactory(val, callback) {
             val = newVal;
         }
     };
-}
+};
 
 const calc = calcFactory(10, console.log);
 calc.plus(5); 

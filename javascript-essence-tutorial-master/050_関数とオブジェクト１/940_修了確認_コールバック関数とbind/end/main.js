@@ -7,7 +7,7 @@
 function calcFactory(val, callback) {
 
     function callbackAfter1s(str) {
-        setTimeout(callback.bind(null, str), 1000);
+        setTimeout(callback(str), 1000);
     }
     return {
         plus: function(target) {
