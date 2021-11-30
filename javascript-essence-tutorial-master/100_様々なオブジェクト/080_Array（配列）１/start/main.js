@@ -1,0 +1,10 @@
+const arry = [1,2,3,4,5];
+const arry2 = [...arry,6,7,8,9];
+arry2.push(6);
+console.log(arry2);
+arry2.pop();
+console.log(arry2);
+arry2.shift();
+arry2.unshift(0);
+console.log(arry2);
+console.log(arry2.splice(0,3));

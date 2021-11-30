@@ -1,4 +1,10 @@
-// calc.plus(5);
-// calc.minus(3);
-// calc.multiply(3);
-// calc.divide(2);
+
+async function fn(){
+    const modules = await import('./calc.js');
+    modules.default.plus(5);
+    modules.default.minus(3);
+    modules.default.multiply(3);
+    modules.default.divide(2);
+}
+
+fn();
